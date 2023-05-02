@@ -1,29 +1,20 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="m-5">
+    <h1 class="mb-10">Products</h1>
+
+    <div class="flex flex-wrap -mx-4">
+      <div
+        v-for="product in productList"
+        :key="product.id"
+        class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8rounded m-5"
+      >
+        <ProductItem :product="product" />
+      </div>
+    </div>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<script setup lang="ts">
+import ProductItem from "~/components/ProductItem.vue";
+import productList from "~/data/products.json";
+</script>

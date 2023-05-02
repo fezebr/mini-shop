@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Casio B2",
+    "price": 700.00,
+    "imgName": "src/assets/casio.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Sport D4",
+    "price": 500.00,
+    "imgName": "src/assets/Force-Sport-watch.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Skmei C1",
+    "price": 1000.00,
+    "imgName": "src/assets/skmei.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Casio Z1",
+    "price": 250.00,
+    "imgName": "src/assets/casioA.jpg"
+  }
+]
