@@ -12,18 +12,58 @@
       </div>
 
       <div class="flex justify-center mt-3">
-        <button class="bg-primary text-white p-2 rounded">Add to cart</button>
+        <button
+          v-if="!getProductQuantityById(product.id)"
+          class="bg-primary text-white p-2 rounded"
+          @click="increaseCartQuantity(product.id)"
+        >
+          Add to cart
+        </button>
+        <div v-else class="flex items-center">
+          <button
+            class="font-bold rounded bg-red-300 px-4 py-1 text-lg text-center"
+            @click="descreaseCartQuantity(product.id)"
+          >
+            -
+          </button>
+          <p class="font-bold text-lg mx-5">
+            {{ getProductQuantityById(product.id) }}
+          </p>
+          <button
+            class="font-bold rounded bg-green-300 px-4 py-1 text-lg text-center"
+            @click="increaseCartQuantity(product.id)"
+          >
+            +
+          </button>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { defineProps } from "@vue/runtime-core";
+import { useCartStore } from "~/store/cart.store";
+import { storeToRefs } from "pinia";
 
-defineProps({
+const props = defineProps({
   product: {
     type: Object,
+    required: true,
   },
 });
+
+const cartStore = useCartStore();
+
+const { getProductQuantityById } = storeToRefs(cartStore);
+console.log(
+  "%cProductItem.vue line:40 getProductQuantityById",
+  "color: #007acc;",
+  getProductQuantityById
+);
+const increaseCartQuantity = (productId: number) => {
+  cartStore.increaseCartQuantity(productId);
+};
+const descreaseCartQuantity = (productId: number) => {
+  cartStore.descreaseCartQuantity(productId);
+};
 </script>

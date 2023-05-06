@@ -1,7 +1,6 @@
 <template>
   <div class="m-5">
-    <h1 class="mb-10">Products</h1>
-
+    <NavBar />
     <div class="flex flex-wrap -mx-4">
       <div
         v-for="product in productList"
@@ -17,4 +16,5 @@
 <script setup lang="ts">
 import ProductItem from "~/components/ProductItem.vue";
 import productList from "~/data/products.json";
+import NavBar from "~/components/NavBar.vue";
 </script>

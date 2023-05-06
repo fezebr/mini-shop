@@ -1,4 +1,4 @@
-export type productsList = {
+export type productsListType = {
      id: number;
      price: number;
      name: String;
