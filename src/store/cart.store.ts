@@ -1,5 +1,6 @@
 import { cartItemsType } from "@/types/Cart";
-// import { productsListType } from "@/types/Products"
+import { productsListType } from "@/types/Product";
+import productList from "~/data/products.json";
 import { defineStore } from "pinia";
 
 
@@ -20,6 +21,13 @@ export const useCartStore = defineStore("CartStore", {
                     const product = state.cartItems.find((item) => item.id === id)
                     return product ? product.quantity : 0
                }
+          },
+          getShoppingCartLists: (state) => {
+               return state.cartItems.map((cartItem: cartItemsType) => {
+                    const product = productList.find((product: productsListType) => product.id === cartItem.id)
+                    return { ...cartItem, ...product }
+
+               })
           }
      },
      actions: {
@@ -40,6 +48,9 @@ export const useCartStore = defineStore("CartStore", {
           },
           isExist(productId: number) {
                return this.cartItems.some(cartItem => cartItem.id === productId)
+          },
+          removeCartItem(productId: number) {
+               this.cartItems = this.cartItems.filter(cartItem => cartItem.id != productId)
           },
      },
 });

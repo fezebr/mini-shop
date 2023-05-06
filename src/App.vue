@@ -1,7 +1,7 @@
 <template>
-  <div class="m-5">
+  <div>
     <NavBar />
-    <div class="flex flex-wrap -mx-4">
+    <div class="p-5 flex flex-wrap">
       <div
         v-for="product in productList"
         :key="product.id"

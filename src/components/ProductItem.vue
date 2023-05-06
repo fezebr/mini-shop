@@ -1,24 +1,25 @@
 <template>
   <div
-    class="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center flex-col"
+    class="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center flex-col hover:shadow-xl"
   >
     <div class="flex justify-center items-center">
       <img class="w-40 h-40" :src="product.imgName" :alt="product.name" />
     </div>
     <div class="bg-gray-100 w-full p-3">
       <div class="flex justify-between">
-        <p>{{ product.price }}$</p>
-        <p>{{ product.name }}</p>
+        <p class="text-lg">{{ product.price }}$</p>
+        <p class="text-lg text-primary">{{ product.name }}</p>
       </div>
 
       <div class="flex justify-center mt-3">
         <button
           v-if="!getProductQuantityById(product.id)"
-          class="bg-primary text-white p-2 rounded"
+          class="bg-green-primary text-white p-2 rounded"
           @click="increaseCartQuantity(product.id)"
         >
           Add to cart
         </button>
+
         <div v-else class="flex items-center">
           <button
             class="font-bold rounded bg-red-300 px-4 py-1 text-lg text-center"
@@ -55,11 +56,7 @@ const props = defineProps({
 const cartStore = useCartStore();
 
 const { getProductQuantityById } = storeToRefs(cartStore);
-console.log(
-  "%cProductItem.vue line:40 getProductQuantityById",
-  "color: #007acc;",
-  getProductQuantityById
-);
+ 
 const increaseCartQuantity = (productId: number) => {
   cartStore.increaseCartQuantity(productId);
 };
