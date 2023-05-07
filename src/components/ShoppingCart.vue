@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white shadow-lg w-60 h-15 rounded p-2">
+  <div class="bg-white shadow-lg w-72 h-15 rounded p-2">
     <div v-for="(cartItem, index) in getShoppingCartLists" :key="cartItem.id">
       <div
         v-if="cartItem.quantity"
@@ -10,7 +10,11 @@
         }"
       >
         <div class="flex">
-          <img class="w-10 h-10" :src="cartItem.imgName" :alt="cartItem.name" />
+          <img
+            class="w-10 h-10 border-r border-gray-200"
+            :src="cartItem.imgName"
+            :alt="cartItem.name"
+          />
 
           <div class="ml-2">
             <p>{{ cartItem.name }}</p>
@@ -33,6 +37,9 @@
               </button>
             </div>
           </div>
+        </div>
+        <div>
+          <p>{{ cartItem.quantity * cartItem.price }}$</p>
         </div>
         <svg
           @click="removeCartItem(cartItem.id)"

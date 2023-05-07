@@ -19,7 +19,7 @@
         </span>
         <!-- v-show="showCartBox" -->
         <ShoppingCart
-          class="absolute top-10 left-[-190px]"
+          class="absolute top-10 left-[-250px]"
           @mouseover="showCartBoxHandler(true)"
           @mouseleave="showCartBoxHandler(false)"
           v-show="showCartBox"
