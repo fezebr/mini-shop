@@ -8,7 +8,7 @@
         v-if="totalNumber"
       >
         <img
-          src="src/assets/shopping-cart.png"
+          src="../assets/shopping-cart.png"
           alt="shopping cart"
           class="w-10 h-10"
         />
@@ -17,7 +17,7 @@
         >
           {{ totalNumber }}
         </span>
-        <!-- v-show="showCartBox" -->
+       
         <ShoppingCart
           class="absolute top-10 left-[-250px]"
           @mouseover="showCartBoxHandler(true)"
@@ -27,7 +27,7 @@
       </div>
       <div v-else>
         <img
-          src="src/assets/shopping-cart.png"
+          src="../assets/shopping-cart.png"
           alt="shopping cart"
           class="w-10 h-10"
         />
@@ -37,10 +37,12 @@
 </template>
 
 <script setup lang="ts">
-import ShoppingCart from "~/components/ShoppingCart.vue";
-import { useCartStore } from "~/store/cart.store";
+ 
 import { storeToRefs } from "pinia";
 import { Ref, ref } from "vue";
+ ;
+import ShoppingCart from "./ShoppingCart.vue";
+import { useCartStore } from "../store/cart.store";
 const cartStore = useCartStore();
 
 const { totalNumber } = storeToRefs(cartStore);
