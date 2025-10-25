@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import ProductItem from "~/components/ProductItem.vue";
+import ProductItem from "@/components/ProductItem.vue";
 import productList from "./data/products.json";
-import NavBar from "~/components/NavBar.vue";
+import NavBar from "@/components/NavBar.vue";
 </script>

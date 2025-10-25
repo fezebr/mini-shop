@@ -1,6 +1,6 @@
 export type productsListType = {
      id: number;
      price: number;
-     name: String;
-     imageUrl: String;
+     name: string;
+     imgName: string;
 };

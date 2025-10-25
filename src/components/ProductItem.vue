@@ -43,7 +43,7 @@
 </template>
 
 <script setup lang="ts">
-import { useCartStore } from "~/store/cart.store";
+import { useCartStore } from "@/store/cart.store";
 import { storeToRefs } from "pinia";
 
 const props = defineProps({

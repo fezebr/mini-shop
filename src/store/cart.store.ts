@@ -1,6 +1,6 @@
 import { cartItemsType } from "@/types/Cart";
-import { productsListType } from "@/types/Product";
-import productList from "~/data/products.json";
+import { productsListType } from "@/types/Products";
+import productList from "@/data/products.json";
 import { defineStore } from "pinia";
 
 
@@ -24,7 +24,7 @@ export const useCartStore = defineStore("CartStore", {
           },
           getShoppingCartLists: (state) => {
                return state.cartItems.map((cartItem: cartItemsType) => {
-                    const product = productList.find((product: productsListType) => product.id === cartItem.id)
+                    const product = productList.find((product) => product.id === cartItem.id)
                     return { ...cartItem, ...product }
 
                })

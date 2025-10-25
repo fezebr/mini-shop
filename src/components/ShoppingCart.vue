@@ -39,7 +39,7 @@
           </div>
         </div>
         <div>
-          <p>{{ cartItem.quantity * cartItem.price }}$</p>
+          <p>{{ cartItem.quantity * (cartItem.price || 0) }}$</p>
         </div>
         <svg
           @click="removeCartItem(cartItem.id)"
@@ -63,7 +63,7 @@
 
 <script setup lang="ts">
 import { storeToRefs } from "pinia";
-import { useCartStore } from "~/store/cart.store";
+import { useCartStore } from "@/store/cart.store";
 
 const cartStore = useCartStore();
 
