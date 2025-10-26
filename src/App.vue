@@ -1,7 +1,7 @@
 <template>
   <div>
     <NavBar />
-    <div class="p-5 flex flex-wrap">
+    <div class="p-5 flex flex-wrap justify-center">
       <div
         v-for="product in productList"
         :key="product.id"
