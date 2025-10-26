@@ -1,18 +1,65 @@
-# Vue 3 + TypeScript + Vite + Pinia + Tailwind
+# Mini Shopping App
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A modern e-commerce shopping cart application built with Vue 3, TypeScript, and Tailwind CSS. Features a responsive design with product browsing, cart management, and real-time quantity updates.
 
-## Recommended IDE Setup
+## ✨ Features
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- 🛍️ Product catalog with watch collection
+- 🛒 Interactive shopping cart with hover dropdown
+- ➕➖ Quantity controls with real-time updates
+- 🗑️ Remove items from cart
+- 📱 Responsive design for all devices
+- 🎨 Modern UI with gradients and animations
+- 🔄 State management with Pinia
 
-## Type Support For `.vue` Imports in TS
+## 🛠️ Tech Stack
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+- **Vue 3** - Progressive JavaScript framework
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Fast build tool and dev server
+- **Pinia** - State management
+- **Tailwind CSS** - Utility-first CSS framework
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## 🚀 Getting Started
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+
+1. Clone the repository
+```bash
+git clone <repository-url>
+cd mini-shop
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Start development server
+```bash
+npm run dev
+```
+
+4. Build for production
+```bash
+npm run build
+```
+
+## 📁 Project Structure
+
+```
+src/
+├── components/          # Vue components
+│   ├── NavBar.vue      # Navigation with cart
+│   ├── ProductGrid.vue # Product listing
+│   ├── ProductItem.vue # Individual product card
+│   └── ShoppingCart.vue# Cart dropdown
+├── data/               # Static data
+│   └── products.json   # Product catalog
+├── store/              # Pinia stores
+│   └── cart.store.ts   # Cart state management
+├── types/              # TypeScript types
+│   ├── Cart.ts         # Cart item types
+│   └── Products.ts     # Product types
+└── App.vue             # Root component
+```
+ 
