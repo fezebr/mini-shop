@@ -1,6 +1,6 @@
 <template>
-  <header class="flex justify-between items-center bg-orange-500 px-6 py-2">
-    <h1 class="font-bold">MINI SHOPPING</h1>
+  <header class="flex justify-between items-center  bg-orange-400  shadow-lg px-8 py-4">
+    <h1 class="text-2xl font-bold text-white tracking-wide">MINI SHOPPING App</h1>
     <div class="relative flex items-center">
       <div
         @mouseover="showCartBoxHandler(true)"
@@ -8,12 +8,12 @@
         v-if="totalNumber"
       >
         <img
-          src="../assets/shopping-cart.png"
+          src="@/assets/shopping-cart.png"
           alt="shopping cart"
-          class="w-10 h-10"
+          class="w-10 h-10 cursor-pointer hover:scale-110 transition-transform duration-200"
         />
         <span
-          class="absolute top-[-20px] left-[-7px] inline-block whitespace-nowrap rounded-[0.27rem] bg-primary-100 relative px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none bg-primary text-white"
+          class="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center animate-pulse"
         >
           {{ totalNumber }}
         </span>
@@ -27,9 +27,9 @@
       </div>
       <div v-else>
         <img
-          src="../assets/shopping-cart.png"
+          src="@/assets/shopping-cart.png"
           alt="shopping cart"
-          class="w-10 h-10"
+          class="w-10 h-10 cursor-pointer hover:scale-110 transition-transform duration-200 opacity-70"
         />
       </div>
     </div>
