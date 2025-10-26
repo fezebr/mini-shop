@@ -1,37 +1,37 @@
 <template>
   <div
-    class="bg-white shadow-lg rounded-lg overflow-hidden flex justify-center flex-col hover:shadow-xl"
+    class="bg-white shadow-lg rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl border border-gray-100"
   >
-    <div class="flex justify-center items-center">
-      <img class="w-40 h-40" :src="product.imgName" :alt="product.name" />
+    <div class="flex justify-center items-center p-4 bg-gradient-to-br from-gray-50 to-white">
+      <img class="w-40 h-40 object-cover rounded-lg" :src="product.imgName" :alt="product.name" />
     </div>
-    <div class="bg-gray-100 w-full p-3">
-      <div class="flex justify-between">
-        <p class="text-lg">{{ product.price }}$</p>
-        <p class="text-lg text-primary">{{ product.name }}</p>
+    <div class="p-4">
+      <div class="flex justify-between items-center mb-3">
+        <p class="text-lg font-bold text-green-600">${{ product.price }}</p>
+        <p class="text-sm font-semibold text-gray-800">{{ product.name }}</p>
       </div>
 
       <div class="flex justify-center mt-3">
         <button
           v-if="!getProductQuantityById(product.id)"
-          class="bg-green-primary text-white p-2 rounded"
+          class="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-md"
           @click="increaseCartQuantity(product.id)"
         >
-          Add to cart
+          Add to Cart
         </button>
 
-        <div v-else class="flex items-center">
+        <div v-else class="flex items-center justify-center space-x-3">
           <button
-            class="font-bold rounded bg-red-300 px-4 py-1 text-lg text-center"
+            class="bg-red-500 hover:bg-red-600 text-white font-bold px-3 py-1 rounded transition-colors duration-200"
             @click="descreaseCartQuantity(product.id)"
           >
             -
           </button>
-          <p class="font-bold text-lg mx-5">
+          <p class="font-bold text-lg text-gray-800 min-w-[2rem] text-center">
             {{ getProductQuantityById(product.id) }}
           </p>
           <button
-            class="font-bold rounded bg-green-300 px-4 py-1 text-lg text-center"
+            class="bg-green-500 hover:bg-green-600 text-white font-bold px-3 py-1 rounded transition-colors duration-200"
             @click="increaseCartQuantity(product.id)"
           >
             +
