@@ -3,36 +3,36 @@
     "id": 1,
     "name": "Casio B2",
     "price": 700.0,
-    "imgName": "src/assets/casio.jpg"
+    "imgName": "/src/assets/casio.jpg"
   },
   {
     "id": 2,
     "name": "Sport D4",
     "price": 500.0,
-    "imgName": "src/assets/Force-Sport-watch.jpg"
+    "imgName": "/src/assets/Force-Sport-watch.jpg"
   },
   {
     "id": 3,
     "name": "Skmei C1",
     "price": 1000.0,
-    "imgName": "src/assets/skmei.jpg"
+    "imgName": "/src/assets/skmei.jpg"
   },
   {
     "id": 4,
     "name": "Casio Z1",
     "price": 250.0,
-    "imgName": "src/assets/casioA.jpg"
+    "imgName": "/src/assets/casioA.jpg"
   },
   {
     "id": 5,
     "name": "Omax ML",
     "price": 500.0,
-    "imgName": "src/assets/omax-ml.jpg"
+    "imgName": "/src/assets/omax-ml.jpg"
   },
   {
     "id": 6,
     "name": "Casio MT",
     "price": 500.0,
-    "imgName": "src/assets/casio-mt.jpg"
+    "imgName": "/src/assets/casio-mt.jpg"
   }
 ]
