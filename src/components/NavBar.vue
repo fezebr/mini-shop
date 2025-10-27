@@ -1,6 +1,6 @@
 <template>
-  <header class="flex justify-between items-center  bg-orange-400  shadow-lg px-8 py-4">
-    <h1 class="text-2xl font-bold text-white tracking-wide">MINI SHOPPING App</h1>
+  <header class="flex justify-between items-center bg-white border-b border-gray-200 px-8 py-4">
+    <h1 class="text-xl font-semibold text-gray-800">MINI SHOPPING</h1>
     <div class="relative flex items-center">
       <div
         @mouseover="showCartBoxHandler(true)"
@@ -13,7 +13,7 @@
           class="w-10 h-10 cursor-pointer hover:scale-110 transition-transform duration-200"
         />
         <span
-          class="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center animate-pulse"
+          class="absolute -top-2 -right-2 bg-gray-800 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center"
         >
           {{ totalNumber }}
         </span>

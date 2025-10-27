@@ -1,20 +1,20 @@
 <template>
   <div
-    class="bg-white shadow-lg rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl border border-gray-100"
+    class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-200"
   >
-    <div class="flex justify-center items-center p-4 bg-gradient-to-br from-gray-50 to-white">
-      <img class="w-40 h-40 object-cover rounded-lg" :src="product.imgName" :alt="product.name" />
+    <div class="flex justify-center items-center p-6 bg-white">
+      <img class="w-32 h-32 object-cover" :src="product.imgName" :alt="product.name" />
     </div>
-    <div class="p-4">
-      <div class="flex justify-between items-center mb-3">
-        <p class="text-lg font-bold text-green-600">${{ product.price }}</p>
-        <p class="text-sm font-semibold text-gray-800">{{ product.name }}</p>
+    <div class="p-4 border-t border-gray-100">
+      <div class="flex justify-between items-center mb-4">
+        <p class="text-lg font-medium text-gray-900">${{ product.price }}</p>
+        <p class="text-sm text-gray-600">{{ product.name }}</p>
       </div>
 
       <div class="flex justify-center mt-3">
         <button
           v-if="!getProductQuantityById(product.id)"
-          class="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-md"
+          class="w-full bg-gray-900 hover:bg-gray-800 text-white font-medium py-2 px-4 rounded transition-colors duration-200"
           @click="increaseCartQuantity(product.id)"
         >
           Add to Cart
@@ -22,16 +22,16 @@
 
         <div v-else class="flex items-center justify-center space-x-3">
           <button
-            class="bg-red-500 hover:bg-red-600 text-white font-bold px-3 py-1 rounded transition-colors duration-200"
+            class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium px-3 py-1 rounded transition-colors duration-200"
             @click="descreaseCartQuantity(product.id)"
           >
             -
           </button>
-          <p class="font-bold text-lg text-gray-800 min-w-[2rem] text-center">
+          <p class="font-medium text-gray-900 min-w-[2rem] text-center">
             {{ getProductQuantityById(product.id) }}
           </p>
           <button
-            class="bg-green-500 hover:bg-green-600 text-white font-bold px-3 py-1 rounded transition-colors duration-200"
+            class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium px-3 py-1 rounded transition-colors duration-200"
             @click="increaseCartQuantity(product.id)"
           >
             +
