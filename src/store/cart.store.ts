@@ -53,4 +53,5 @@ export const useCartStore = defineStore("CartStore", {
                this.cartItems = this.cartItems.filter(cartItem => cartItem.id != productId)
           },
      },
+     persist: true,
 });
