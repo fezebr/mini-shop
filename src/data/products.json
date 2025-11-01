@@ -34,5 +34,35 @@
     "name": "Casio MT",
     "price": 500.0,
     "imgName": "/casio-mt.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Iphone 16 pro max",
+    "price": 500.0,
+    "imgName": "/16-pro-max.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Iphone 16 pro",
+    "price": 500.0,
+    "imgName": "/16-pro.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Iphone 13 pro max",
+    "price": 500.0,
+    "imgName": "/iphone-13-pro-max.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Iphone 15 pro max",
+    "price": 500.0,
+    "imgName": "/iphone-15-pro-max.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Iphone 17 pro",
+    "price": 500.0,
+    "imgName": "/iphone-17-pro.jpg"
   }
 ]
