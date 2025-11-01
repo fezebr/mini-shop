@@ -3,66 +3,77 @@
     "id": 1,
     "name": "Casio B2",
     "price": 700.0,
-    "imgName": "/casio.jpg"
+    "imgName": "/casio.jpg",
+    "category": "watch"
   },
   {
     "id": 2,
     "name": "Sport D4",
     "price": 500.0,
-    "imgName": "/Force-Sport-watch.jpg"
+    "imgName": "/Force-Sport-watch.jpg",
+    "category": "watch"
   },
   {
     "id": 3,
     "name": "Skmei C1",
     "price": 1000.0,
-    "imgName": "/skmei.jpg"
+    "imgName": "/skmei.jpg",
+    "category": "watch"
   },
   {
     "id": 4,
     "name": "Casio Z1",
     "price": 250.0,
-    "imgName": "/casioA.jpg"
+    "imgName": "/casioA.jpg",
+    "category": "watch"
   },
   {
     "id": 5,
     "name": "Omax ML",
     "price": 500.0,
-    "imgName": "/omax-ml.jpg"
+    "imgName": "/omax-ml.jpg",
+    "category": "watch"
   },
   {
     "id": 6,
     "name": "Casio MT",
     "price": 500.0,
-    "imgName": "/casio-mt.jpg"
+    "imgName": "/casio-mt.jpg",
+    "category": "watch"
   },
   {
     "id": 7,
-    "name": "Iphone 16 pro max",
-    "price": 500.0,
-    "imgName": "/16-pro-max.jpg"
+    "name": "iPhone 16 Pro Max",
+    "price": 1199.0,
+    "imgName": "/16-pro-max.jpg",
+    "category": "phone"
   },
   {
     "id": 8,
-    "name": "Iphone 16 pro",
-    "price": 500.0,
-    "imgName": "/16-pro.jpg"
+    "name": "iPhone 16 Pro",
+    "price": 999.0,
+    "imgName": "/16-pro.jpg",
+    "category": "phone"
   },
   {
     "id": 9,
-    "name": "Iphone 13 pro max",
-    "price": 500.0,
-    "imgName": "/iphone-13-pro-max.jpg"
+    "name": "iPhone 13 Pro Max",
+    "price": 799.0,
+    "imgName": "/iphone-13-pro-max.jpg",
+    "category": "phone"
   },
   {
     "id": 10,
-    "name": "Iphone 15 pro max",
-    "price": 500.0,
-    "imgName": "/iphone-15-pro-max.jpg"
+    "name": "iPhone 15 Pro Max",
+    "price": 1099.0,
+    "imgName": "/iphone-15-pro-max.jpg",
+    "category": "phone"
   },
   {
     "id": 11,
-    "name": "Iphone 17 pro",
-    "price": 500.0,
-    "imgName": "/iphone-17-pro.jpg"
+    "name": "iPhone 17 Pro",
+    "price": 1299.0,
+    "imgName": "/iphone-17-pro.jpg",
+    "category": "phone"
   }
 ]

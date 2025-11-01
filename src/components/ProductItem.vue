@@ -2,8 +2,11 @@
   <div
     class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-200"
   >
-    <div class="flex justify-center items-center p-6 bg-white">
+    <div class="relative flex justify-center items-center p-6 bg-white">
       <img class="w-32 h-32 object-cover" :src="product.imgName" :alt="product.name" />
+      <span class="absolute top-2 right-2 bg-gray-800 text-white text-xs px-2 py-1 rounded-full capitalize">
+        {{ product.category }}
+      </span>
     </div>
     <div class="p-4 border-t border-gray-100">
       <div class="flex justify-between items-center mb-4">
